@@ -1,151 +1,41 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Litecoin | لایت کوین</title>
-
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Tahoma,sans-serif;
-        }
-
-        body{
-            background:#111827;
-            color:#fff;
-            line-height:1.9;
-        }
-
-        header{
-            background:linear-gradient(135deg,#345dff,#9aa0a6);
-            padding:50px 20px;
-            text-align:center;
-        }
-
-        header h1{
-            font-size:48px;
-        }
-
-        header p{
-            margin-top:15px;
-            font-size:20px;
-        }
-
-        .container{
-            max-width:1100px;
-            margin:auto;
-            padding:30px;
-        }
-
-        .card{
-            background:#1f2937;
-            margin:20px 0;
-            padding:25px;
-            border-radius:15px;
-            box-shadow:0 0 15px rgba(0,0,0,.3);
-        }
-
-        h2{
-            color:#4ea8ff;
-            margin-bottom:15px;
-        }
-
-        ul{
-            padding-right:20px;
-        }
-
-        li{
-            margin:10px 0;
-        }
-
-        .btn{
-            display:inline-block;
-            margin-top:20px;
-            padding:12px 25px;
-            background:#4ea8ff;
-            color:white;
-            text-decoration:none;
-            border-radius:10px;
-            transition:.3s;
-        }
-
-        .btn:hover{
-            background:#2f80ed;
-        }
-
-        footer{
-            text-align:center;
-            padding:25px;
-            background:#0b1220;
-            color:#aaa;
-        }
-    </style>
-</head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Litecoin Landing</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at top,#4b5563,#0b1020)}
+.card{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);padding:40px;border-radius:24px;max-width:900px;text-align:center;box-shadow:0 0 30px rgba(255,255,255,.08)}
+h1{font-size:64px;margin:0;background:linear-gradient(90deg,#fff,#bfc7d5);-webkit-background-clip:text;color:transparent}
+p{font-size:20px;color:#d1d5db}
+.btn{display:inline-block;padding:14px 28px;border-radius:12px;background:#6b7280;color:#fff;text-decoration:none;margin:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;padding:50px}
+.box{background:#151c30;padding:20px;border-radius:16px;text-align:center}
+.num{font-size:36px;font-weight:bold}
+footer{text-align:center;padding:30px;color:#aaa}
+canvas{position:fixed;inset:0;z-index:-1}
+</style></head>
 <body>
-
-<header>
-    <h1>Litecoin (LTC)</h1>
-    <p>ارز دیجیتال سریع، کم‌هزینه و متن‌باز</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>لایت کوین چیست؟</h2>
-        <p>
-            لایت کوین (Litecoin) یکی از قدیمی‌ترین ارزهای دیجیتال است که در سال ۲۰۱۱
-            توسط چارلی لی ایجاد شد. هدف آن ارائه تراکنش‌های سریع‌تر و کارمزد کمتر نسبت
-            به بیت کوین است.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>ویژگی‌ها</h2>
-
-        <ul>
-            <li>⚡ سرعت بالای تأیید تراکنش‌ها</li>
-            <li>💰 کارمزد پایین</li>
-            <li>🔒 امنیت بالا</li>
-            <li>🌍 شبکه غیرمتمرکز</li>
-            <li>🛠 متن‌باز (Open Source)</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>مشخصات شبکه</h2>
-
-        <ul>
-            <li>نماد: LTC</li>
-            <li>سال راه‌اندازی: ۲۰۱۱</li>
-            <li>الگوریتم: Scrypt</li>
-            <li>حداکثر تعداد سکه: ۸۴ میلیون</li>
-            <li>زمان ایجاد هر بلاک: حدود ۲.۵ دقیقه</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>مزایا</h2>
-
-        <ul>
-            <li>انتقال سریع دارایی</li>
-            <li>مناسب برای پرداخت‌های روزانه</li>
-            <li>جامعه کاربری بزرگ</li>
-            <li>پشتیبانی توسط بسیاری از صرافی‌ها و کیف پول‌ها</li>
-        </ul>
-
-        <a class="btn" href="https://litecoin.org" target="_blank">
-            وب‌سایت رسمی Litecoin
-        </a>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Litecoin Information Page
-</footer>
-
-</body>
-</html>
+<canvas id="bg"></canvas>
+<section class="hero"><div class="card">
+<h1>Litecoin</h1>
+<p>Fast • Secure • Low Fees</p>
+<a class="btn" href="https://litecoin.org" target="_blank">Official Website</a>
+<a class="btn" href="#stats">Explore</a>
+</div></section>
+<section id="stats" class="stats">
+<div class="box"><div class="num" data-target="84">0</div><div>Million Max Supply</div></div>
+<div class="box"><div class="num" data-target="2.5">0</div><div>Minute Block Time</div></div>
+<div class="box"><div class="num" data-target="2011">0</div><div>Launch Year</div></div>
+<div class="box"><div class="num" data-target="100">0</div><div>Open Source</div></div>
+</section>
+<footer>Made with HTML, CSS & JavaScript</footer>
+<script>
+document.querySelectorAll('.num').forEach(n=>{
+ let t=parseFloat(n.dataset.target),v=0,s=t/100;
+ let i=setInterval(()=>{v+=s;if(v>=t){v=t;clearInterval(i)};n.textContent=(t%1?v.toFixed(1):Math.floor(v))},20);
+});
+const c=document.getElementById('bg'),x=c.getContext('2d');
+function rs(){c.width=innerWidth;c.height=innerHeight}rs();onresize=rs;
+let p=[...Array(80)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5),vy:(Math.random()-.5)}));
+(function a(){x.clearRect(0,0,c.width,c.height);x.fillStyle='white';p.forEach(o=>{o.x+=o.vx;o.y+=o.vy;if(o.x<0||o.x>c.width)o.vx*=-1;if(o.y<0||o.y>c.height)o.vy*=-1;x.globalAlpha=.6;x.beginPath();x.arc(o.x,o.y,2,0,7);x.fill();});requestAnimationFrame(a)})();
+</script></body></html>
